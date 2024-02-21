@@ -168,25 +168,25 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_menu2
+        source "${BUILD_PATH}/common.sh" && Diy_menu2
  
     - name: 更新插件源
       if: env.REPO_TOKEN
       run: |
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_menu3
+        source "${BUILD_PATH}/common.sh" && Diy_menu3
  
     - name: 加载自定义设置
       if: env.REPO_TOKEN
       run: |
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_menu4
+        source "${BUILD_PATH}/common.sh" && Diy_menu4
         
     - name: 安装插件源
       if: env.REPO_TOKEN
       run: |
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_menu5
+        source "${BUILD_PATH}/common.sh" && Diy_menu5
     
     - name: SSH远程连接（make menuconfig）
       if: env.SSH_ACTION == 'true'
@@ -197,7 +197,7 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_menu6
+        source "${BUILD_PATH}/common.sh" && Diy_menu6
         
     - name: 上传"${{ matrix.target }}"配置文件在 Github Artifacts
       if: steps.compile.outcome == 'success'
@@ -211,7 +211,7 @@ jobs:
       if: env.COMPILATION_INFORMATION == 'true'
       run: |
         cd openwrt
-        source ${BUILD_PATH}/common.sh && Diy_xinxi
+        source "${BUILD_PATH}/common.sh" && Diy_xinxi
     
     - name: 清理Actions空间
       continue-on-error: true
@@ -240,7 +240,7 @@ jobs:
       if: steps.compile.outcome == 'success' && env.REPO_TOKEN
       run: |
         cd ${GITHUB_WORKSPACE}
-        source ${BUILD_PATH}/common.sh && build_openwrt
+        source "${BUILD_PATH}/common.sh" && build_openwrt
         
     - name: Telegram或pushplus信息通知
       if: env.PUSH_PLUS_TOKEN && env.INFORMATION_NOTICE == 'PUSH' || env.TELEGRAM_BOT_TOKEN && env.INFORMATION_NOTICE == 'TG'
