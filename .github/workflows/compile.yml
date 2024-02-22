@@ -154,7 +154,7 @@ jobs:
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(($(nproc) + 1)) || make -j1 V=s
-        echo "date=$(date "+%Y%m%d%H%M%S")" >> ${GITHUB_ENV}
+        echo "date=$(date "+%Y.%m.%d-%H%M")" >> ${GITHUB_ENV}
         source ${BUILD_PATH}/common.sh && firmware_jiance
         
     - name: 自动打包Amlogic_Rockchip系列固件
