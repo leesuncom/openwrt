@@ -34,11 +34,11 @@ export Enable_IPV4_function="0"             # 编译IPV4固件(1为启用命令,
 export PassWall_luci_branch="0"             # passwall的源码分别有【luci分支】和【luci-smartdns-new-version分支】(填0为使用luci分支,填1为使用luci-smartdns-new-version分支)
 
 # 替换OpenClash的源码(默认master分支)
-export OpenClash_branch="2"                 # OpenClash的源码分别有【master分支】和【dev分支】(填0为使用master分支,填1为使用dev分支)
-export OpenClash_Core="1"                   # 增加OpenClash时,把核心下载好,(填1为下载【dev单核】,填2为下载【dev/meta/premium三核】,填0为不需要核心)
+export OpenClash_branch="0"                 # OpenClash的源码分别有【master分支】和【dev分支】(填0为使用master分支,填1为使用dev分支)
+export OpenClash_Core="2"                   # 增加OpenClash时,把核心下载好,(填1为下载【dev单核】,填2为下载【dev/meta/premium三核】,填0为不需要核心)
 
-# 个性签名,默认增加年月日[$(TZ=UTC-8 date "+%Y.%m.%d")]
-export Customized_Information="NeoBird $(TZ=UTC-8 date +%Y.%m.%d-%H%M)"  # 个性签名,你想写啥就写啥，(填0为不作修改)
+# 个性签名,默认增加年月日[$(TZ=UTC-8 date +%Y-%m%d-%H%M)]
+export Customized_Information="NeoBird `date -d "$(date +'%Y-%m-%d %H:%M:%S')" +%s`"  # 个性签名,你想写啥就写啥，(填0为不作修改)
 
 # 更换固件内核
 export Replace_Kernel="0"                    # 更换内核版本,在对应源码的[target/linux/架构]查看patches-x.x,看看x.x有啥就有啥内核了(填入内核x.x版本号,填0为不作修改)
@@ -74,7 +74,7 @@ export kernel_usage="stable"
 
 
 # 修改插件名字
-sed -i 's/"终端"/"TTYD"/g' `egrep "终端" -rl ./`
+sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
 sed -i 's/"aMule设置"/"电驴下载"/g' `egrep "aMule设置" -rl ./`
 sed -i 's/"网络存储"/"NAS"/g' `egrep "网络存储" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `egrep "Turbo ACC 网络加速" -rl ./`
