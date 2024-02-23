@@ -64,14 +64,12 @@ export Delete_unnecessary_items="0"          # 个别机型内一堆其他机型
 export Disable_53_redirection="0"            # 删除DNS强制重定向53端口防火墙规则(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 export Cancel_running="0"                    # 取消路由器每天跑分任务(个别源码本身不带此功能)(1为启用命令,填0为不作修改)
 
-
 # 晶晨CPU系列打包固件设置(不懂请看说明)
 export amlogic_model="s905d"
 export amlogic_kernel="5.10.01_6.1.01"
 export auto_kernel="true"
 export rootfs_size="2560"
 export kernel_usage="stable"
-
 
 # 修改插件名字
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
@@ -85,8 +83,13 @@ sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -
 sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
-sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
-# sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
+sed -i 's/"Argon 主题设置"/"主题设置"/g' `grep "Argon 主题设置" -rl ./`
+sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
+sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
+sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
+sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
+sed -i 's/"iStore"/"全新首页"/g' `egrep "iStore" -rl ./`
+sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
