@@ -86,7 +86,7 @@ sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
 # sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
 # sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
-# sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
+sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
 # sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
 # sed -i 's/"iStore"/"全新首页"/g' `egrep "iStore" -rl ./`
 # sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
