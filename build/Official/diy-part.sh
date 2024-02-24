@@ -84,7 +84,7 @@ sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
-sed -i '6s/"OpenClash"/"世界之窗"/g' `egrep "OpenClash" -rl ./`
+sed -i '6s/OpenClash/世界之窗/' `egrep "OpenClash" -rl ./`
 sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
 sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
 sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
