@@ -81,7 +81,7 @@ sed -i 's/"KMS 服务器"/"KMS激活"/g' `egrep "KMS 服务器" -rl ./`
 sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -rl ./`
 sed -i 's/"Web 管理"/"网页管理"/g' `egrep "Web 管理" -rl ./`
 sed -i 's/"管理权"/"密码服务"/g' `egrep "管理权" -rl ./`
-sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
+# sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
 # sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
 # sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
 # sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
