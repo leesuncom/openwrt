@@ -88,8 +88,8 @@ sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
 sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
 sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
 sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
-sed -i 's#"DHCP/DNS"#"域名服务"#g' `egrep "DHCP/DNS" -rl ./
-sed -i 's#"IP/MAC"#"地址绑定"#g' `egrep "IP/MAC" -rl ./`
+sed -i 's#"DHCP/DNS"#"域名服务"#g' `egrep "DHCP/DNS" -rl ./`
+sed -i 's#"IP/MAC绑定"#"地址绑定"#g' `egrep "IP/MAC绑定" -rl ./`
 sed -i '16s/"iStore"/"全新首页"/g' `egrep "iStore" -rl feeds/dalang/luci-app-store/luci/luci-app-store/luasrc/controller/store.lua`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
