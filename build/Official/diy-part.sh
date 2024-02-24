@@ -38,7 +38,7 @@ export OpenClash_branch="0"                 # OpenClash的源码分别有【mast
 export OpenClash_Core="2"                   # 增加OpenClash时,把核心下载好,(填1为下载【dev单核】,填2为下载【dev/meta/premium三核】,填0为不需要核心)
 
 # 个性签名,默认增加年月日[$(TZ=UTC-8 date +%Y-%m%d-%H%M)]
-export Customized_Information="NeoBird Offical $(TZ=UTC-8 date "+%Y.%m.%d")"  # 个性签名,你想写啥就写啥，(填0为不作修改)
+export Customized_Information="NeoBird Offical $(TZ=UTC-8 date "+%Y-%m%d-%H%M")"  # 个性签名,你想写啥就写啥，(填0为不作修改)
 
 # 更换固件内核
 export Replace_Kernel="0"                    # 更换内核版本,在对应源码的[target/linux/架构]查看patches-x.x,看看x.x有啥就有啥内核了(填入内核x.x版本号,填0为不作修改)
@@ -85,11 +85,11 @@ sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 sed -i 's/"Argon 主题设置"/"主题设置"/g' `egrep "Argon 主题设置" -rl ./`
 sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
-# sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
-# sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
-# sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
-# sed -i 's/"iStore"/"全新首页"/g' `egrep "iStore" -rl ./`
-# sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
+sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
+sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
+sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
+sed -i 's/"iStore"/"全新首页"/g' `egrep "iStore" -rl ./`
+sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
