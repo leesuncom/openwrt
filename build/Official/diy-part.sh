@@ -74,22 +74,20 @@ export kernel_usage="stable"
 # 修改插件名字
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
 sed -i 's/"aMule设置"/"电驴下载"/g' `egrep "aMule设置" -rl ./`
-sed -i 's/"网络存储"/"NAS"/g' `egrep "网络存储" -rl ./`
+sed -i 's/"NAS"/"网络存储"/g' `egrep "NAS" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `egrep "Turbo ACC 网络加速" -rl ./`
-sed -i 's/"实时流量监测"/"流量"/g' `egrep "实时流量监测" -rl ./`
+sed -i 's/"实时流量监测"/"流量监测"/g' `egrep "实时流量监测" -rl ./`
 sed -i 's/"KMS 服务器"/"KMS激活"/g' `egrep "KMS 服务器" -rl ./`
-sed -i 's/"TTYD 终端"/"TTYD"/g' `egrep "TTYD 终端" -rl ./`
 sed -i 's/"USB 打印服务器"/"打印服务"/g' `egrep "USB 打印服务器" -rl ./`
-sed -i 's/"Web 管理"/"Web管理"/g' `egrep "Web 管理" -rl ./`
-sed -i 's/"管理权"/"改密码"/g' `egrep "管理权" -rl ./`
-sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
+sed -i 's/"Web 管理"/"网页管理"/g' `egrep "Web 管理" -rl ./`
+sed -i 's/"管理权"/"密码服务"/g' `egrep "管理权" -rl ./`
 sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
 # sed -i 's/"OpenClash"/"世界旅行"/g' `egrep "OpenClash" -rl ./`
 # sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
 # sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
 # sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
 # sed -i 's/"iStore"/"全新首页"/g' `egrep "iStore" -rl ./`
-sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
+# sed -i 's/"DHCP/DNS"/"域名服务"/g' `egrep "DHCP/DNS" -rl ./`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
 cat >"$CLEAR_PATH" <<-EOF
