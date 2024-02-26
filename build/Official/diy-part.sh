@@ -85,8 +85,8 @@ sed -i 's/"管理权"/"管理密码"/g' `egrep "管理权" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `egrep "带宽监控" -rl ./`
 sed -i 's/"Argon设置"/"主题设置"/g' `egrep "Argon设置" -rl ./`
 # sed -i '10s/"OpenClash"/"世界之窗"/g' `egrep "OpenClash" -rl ./feeds/OpenClash/luci-app-openclash/luasrc/controller/openclash.lua`
-# sed -i '10s/"OpenClash"/"世界之窗"/g' /usr/lib/lua/luci/controller/openclash.lua
-sed -i '6s/"OpenClash"/"世界之窗"/g' feeds/OpenClash/luci-app-openclash/po/zh-cn/openclash.zh-cn.po
+sed -i '10s/"OpenClash"/"世界之窗"/g' /usr/lib/lua/luci/controller/openclash.lua
+# sed -i '6s/"OpenClash"/"世界之窗"/g' feeds/OpenClash/luci-app-openclash/po/zh-cn/openclash.zh-cn.po
 # sed -i 's/"OpenClash"/"世界之窗"/g' `egrep "OpenClash" -rl ./`
 sed -i 's/"SmartDNS"/"域名加速"/g' `egrep "SmartDNS" -rl ./`
 sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
