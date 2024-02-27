@@ -89,7 +89,6 @@ sed -i 's/"MosDNS"/"域名转发"/g' `egrep "MosDNS" -rl ./`
 sed -i 's/"UPnP"/"即插即用"/g' `egrep "UPnP" -rl ./`
 sed -i 's#"DHCP/DNS"#"动态主机"#g' `egrep "DHCP/DNS" -rl ./`
 sed -i 's#"IP/MAC绑定"#"地址绑定"#g' `egrep "IP/MAC绑定" -rl ./`
-sed -i 's/"udpxy"/"组播转发"/g' `egrep "udpxy" -rl ./`
 sed -i '16s/"iStore"/"应用"/g' `egrep "iStore" -rl feeds/dalang/luci-app-store/luci/luci-app-store/luasrc/controller/store.lua`
 
 # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间(根据编译机型变化,自行调整删除名称)
