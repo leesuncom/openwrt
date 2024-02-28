@@ -74,8 +74,8 @@ export kernel_usage="stable"
 
 # 回滚 iptables 为 1.8.7（1.8.8有一个致命bug，当上游升级至1.8.9时可以去除下面3行；具体参见https://www.netfilter.org/projects/iptables/files/changes-iptables-1.8.9.txt）
 rm -rf ./package/network/utils/iptables
-cp -rf ../openwrt_22/package/network/utils/iptables ./package/network/utils/iptables
-cp -rf ../lede/package/network/utils/iptables/patches/900-bcm-fullconenat.patch ./package/network/utils/iptables/patches/900-bcm-fullconenat.patch
+cp -rf https://github.com/openwrt/openwrt/blob/openwrt-22.03/package/network/utils/iptables ./package/network/utils/iptables
+cp -rf https://github.com/coolsnowwolf/lede/blob/master/package/network/utils/iptables/patches/900-bcm-fullconenat.patch ./package/network/utils/iptables/patches/900-bcm-fullconenat.patch
 
 # 修改插件名字
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
