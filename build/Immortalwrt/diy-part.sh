@@ -53,10 +53,10 @@ export AdGuardHome_Core="1"                  # 编译固件时自动增加AdGuar
 export Disable_NaiveProxy="1"                # 因个别源码的分支不支持编译NaiveProxy,不小心选择了就编译错误了,为减少错误,打开这个选项后,就算选择了NaiveProxy也会把NaiveProxy干掉不进行编译的(1为启用命令,填0为不作修改)
 
 # 开启NTFS格式盘挂载
-export Automatic_Mount_Settings="0"          # 编译时加入开启NTFS格式盘挂载的所需依赖(1为启用命令,填0为不作修改)
+export Automatic_Mount_Settings="1"          # 编译时加入开启NTFS格式盘挂载的所需依赖(1为启用命令,填0为不作修改)
 
 # 去除网络共享(autosamba)
-export Disable_autosamba="1"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
+export Disable_autosamba="0"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
 
 # 其他
 export Ttyd_account_free_login="1"           # 设置ttyd免密登录(1为启用命令,填0为不作修改)
@@ -73,9 +73,9 @@ export rootfs_size="2560"
 export kernel_usage="stable"
 
 # 回滚 iptables 为 1.8.7（1.8.8有一个致命bug，当上游升级至1.8.9时可以去除下面3行；具体参见https://www.netfilter.org/projects/iptables/files/changes-iptables-1.8.9.txt）
-rm -rf ./package/network/utils/iptables
-cp -rf https://github.com/openwrt/openwrt/blob/openwrt-22.03/package/network/utils/iptables ./package/network/utils/iptables
-cp -rf https://github.com/coolsnowwolf/lede/blob/master/package/network/utils/iptables/patches/900-bcm-fullconenat.patch ./package/network/utils/iptables/patches/900-bcm-fullconenat.patch
+# rm -rf ./package/network/utils/iptables
+# cp -rf https://github.com/openwrt/openwrt/blob/openwrt-22.03/package/network/utils/iptables ./package/network/utils/iptables
+# cp -rf https://github.com/coolsnowwolf/lede/blob/master/package/network/utils/iptables/patches/900-bcm-fullconenat.patch ./package/network/utils/iptables/patches/900-bcm-fullconenat.patch
 
 # 修改插件名字
 sed -i 's/"TTYD"/"终端"/g' `egrep "TTYD" -rl ./`
