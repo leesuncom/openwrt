@@ -162,6 +162,14 @@ jobs:
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
         cp -Rf ${GITHUB_WORKSPACE}/build ${GITHUB_WORKSPACE}/openwrt/build
         chmod -R +x ${GITHUB_WORKSPACE}/openwrt/build
+
+    - name: 文件修补二
+      run: |
+        cd openwrt
+        git clone -b openwrt-22.03 https://github.com/openwrt/openwrt.git openwrt-22.03
+        rm -rf package/network/utils/iptables
+        cp -rf openwrt-22.03/package/network/utils/iptables package/network/utils/iptables
+        wget -P package/network/utils/iptables/patches/ https://github.com/coolsnowwolf/lede/raw/master/package/network/utils/iptables/patches/900-bcm-fullconenat.patch   
     
     - name: 公 告
       if: env.REPO_TOKEN
